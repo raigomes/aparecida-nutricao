@@ -1,6 +1,8 @@
 /*Calcula IMC*/
-var controlador = (
+var controladorIMC = (
 function() {
+	"use-strict";
+	
 	function calculaIMC(peso, altura) {
 		var imc = 0		
 		if(altura > 0)

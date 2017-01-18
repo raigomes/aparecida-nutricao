@@ -1,6 +1,6 @@
 /*Filtra os pacientes na tabela*/
 (function() {
-	"use-strict";	
+	"use-strict";
 
 	$("#filtrar-tabela").on("input", function(){
 		var busca = $("#filtrar-tabela").val();

@@ -1,4 +1,5 @@
-(function() {
+/* Busca pacientes no servidor com AJAX*/
+(function(controladorCadastro) {
 	"use strict";
 
 	$("#buscar-pacientes").click(function() {
@@ -9,7 +10,7 @@
 
 				clientes.forEach(function(cliente) {
 					if(cliente.nome != "") {
-						controlador.adicionaPaciente(cliente);
+						controladorCadastro.adicionaPaciente(cliente);
 					}
 				})
 
@@ -17,4 +18,4 @@
 			}
 		)
 	});
-})(controlador);
+})(controladorCadastro);

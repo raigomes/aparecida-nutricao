@@ -1,6 +1,7 @@
-controlador = (
-function(){
+controladorCadastro = (
+function(controladorIMC){
 	"use-strict";
+	
 	var nomePaciente, pesoPaciente, alturaPaciente, percGorduraPaciente;
 
 	$("#adicionar-paciente").click(function(event){
@@ -22,7 +23,7 @@ function(){
 			peso: pesoPaciente,
 			altura: alturaPaciente,
 			gordura: percGorduraPaciente,
-			imc: controlador.calculaIMC(pesoPaciente, alturaPaciente)
+			imc: controladorIMC.calculaIMC(pesoPaciente, alturaPaciente)
 		};
 	}
 
@@ -56,7 +57,9 @@ function(){
 	}
 
 	/* Inclui funçao publica no controlador*/
-	controlador.adicionaPaciente = adicionaPaciente;
-	return controlador
 	
-})(controlador);
+	return {
+		adicionaPaciente = adicionaPaciente
+	};
+	
+})(controladorIMC);
